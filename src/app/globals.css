@@ -1,26 +1,201 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html,
+body {
+  font-family: "Lora", serif;
+  color: var(--ink);
+  margin: 0;
+  background: #fefefe;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-lora: var(--font-lora);
+  --font-mono: var(--font-lora-mono);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ----- Brand tokens & constants (Tangerine-like) ----- */
+:root {
+  --radius: 0.625rem;
+
+  /* parchment + ink */
+  --background: oklch(0.985 0 0);
+  --foreground: oklch(0.145 0 0);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+
+  /* Tangerine brand colors */
+  --tangerine: #ee4926;
+  --parchment: #ede7dd;
+  --ink: #252323;
+
+  /* slab width used by earlier versions; safe to keep */
+  --slab: min(56.25vw, 48rem);
+}
+
+/* ----------------------------------------------
+   3) Horizontal ribbon container (desktop)
+---------------------------------------------- */
+#wrapper {
+  width: calc(100% - 2em);
+  display: flex;
+  white-space: nowrap;
+  overflow: visible;
+  white-space: normal;
+  -webkit-overflow-scrolling: touch;
+  transform: translate3d(0, 0, 0);
+}
+/* Mobile override: vertical stack */
+@media (max-width: 768px) {
+  #wrapper {
+    white-space: normal;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 2em; /* frame on all sides */
+    width: calc(100% - 4em); /* account for both left+right margins */
+    padding-bottom: 2em;
+    min-height: calc(100dvh - 4em);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ----------------------------------------------
+   4) Reveal animation baseline
+---------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 16px, 0) scale(0.98);
+  will-change: transform, opacity;
+  transition: transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1),
+    opacity 0.6s ease;
+}
+.reveal.in {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+/* Optional: desktop scrollbar polish */
+@media (pointer: fine) {
+  ::-webkit-scrollbar {
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes dotBounce {
+  0% {
+    top: 0%;
+  }
+  50% {
+    top: 80%;
+  } /* near bottom of mouse */
+  100% {
+    top: 0%;
+  }
+}
+
+.animate-dotBounce {
+  animation: dotBounce 3s infinite ease-in-out;
+}
+
+/* WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  height: 10px; /* horizontal scrollbar height */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* track color */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ee4926; /* your brand orange */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c73a1f; /* darker on hover */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ee4926 #f1f1f1;
 }
