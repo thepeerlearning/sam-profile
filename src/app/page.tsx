@@ -932,7 +932,7 @@ export default function Page() {
         </div>
         {/* (2)the Chess players section */}
         <div className="reveal inline-grid flex-none overflow-hidden bg-[#ECE9E1]">
-          <div className="relative h-[280px] w-full sm:w-[250px]">
+          <div className="relative h-[300px] w-full sm:w-[250px]">
             <Image src="/student-chess-players.webp" alt="" fill />
           </div>
           <article className="p-6 font-lora font-normal text-[#252323] text-[18px] leading-[32px] tracking-normal break-words hyphens-auto [text-wrap:balance]">
