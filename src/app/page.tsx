@@ -240,15 +240,16 @@ export default function Page() {
                 national and international competitions, including{" "}
                 <span className="font-bold italic">
                   the National BETA State Competition in Computer Science (
-                  <VideoPlayer
+                  {/* <VideoPlayer
                     videoUrl="https://res.cloudinary.com/your-cloud/video/upload/v12345/demo.mp4"
                     label="2024"
-                  />{" "}
-                  &amp;{" "}
-                  <VideoPlayer
+                  />{" "} */}{" "}
+                  <span className="underline">2024</span> &amp;{" "}
+                  <span className="underline">2025</span>
+                  {/* <VideoPlayer
                     videoUrl="https://res.cloudinary.com/djeoaylbe/video/upload/v1751487159/WhatsApp_Video_2025-06-20_at_13.25.54_1_psrji2.mov"
                     label="2025"
-                  />
+                  /> */}
                   , U.S.)
                 </span>{" "}
                 and the{" "}
