@@ -133,7 +133,7 @@ export default function Page() {
     if (typeof window === "undefined") return profileMaxW
     if (isTablet)
       return Math.min(profileMaxW, Math.floor(window.innerWidth * 0.5))
-    if (!isMobile) return 746 // ← desktop
+    if (!isMobile) return 746
     return profileMaxW
   })()
 
@@ -292,7 +292,7 @@ export default function Page() {
                 </span>
                 <span className="flex items-center gap-1">
                   <OpenLetter />
-                  <Link href="mailto:sam@example.com" target="_blank">
+                  <Link href="mailto:sameseyin1@gmail.com" target="_blank">
                     <span className="flex flex-col">
                       Email
                       <span className="border-b border-dashed border-[#FEFEFE] cursor-pointer"></span>
@@ -354,7 +354,7 @@ export default function Page() {
                   <span className="flex items-center gap-1">
                     <OpenLetter />
                     <Link
-                      href="mailto:sam@example.com"
+                      href="mailto:sameseyin1@gmail.com"
                       target="_blank"
                       className="cursor-pointer"
                     >
@@ -375,7 +375,7 @@ export default function Page() {
             className="h-[calc(100dvh-4em)] 2xl:h-[calc(100dvh-10em)] w-max flex flex-nowrap items-stretch pr-2"
           >
             {/* (2) the Introduction section */}
-            <div className="reveal py-[32px] inline-grid flex-none min-w-[1380px] max-w-[1380px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
+            <div className="reveal py-[32px] inline-grid flex-none min-w-[1444px] max-w-[1444px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
               <div className="w-[832px] grid grid-cols-1 gap-8">
                 <div className="w-full mx-10">
                   <p className="w-[584px] border-y border-[#CACACA] font-lora font-normal text-[#252323] text-[18px] leading-[32px] tracking-normal break-words hyphens-auto [text-wrap:balance] text-left pt-[20px] pb-[18px]">
@@ -414,378 +414,475 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-              <p className="max-w-[584px] mx-auto font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal break-words hyphens-auto [text-wrap:balance] py-[32px] pl-10 text-left flex flex-col gap-8 px-2 xl:pl-10 xl:pr-6 ">
-                <span>
-                  <span className="font-bold italic">
-                    My name is Sam Eseyin,
-                  </span>{" "}
-                  and in the 2000s, I was obsessed with robotics movies. They
-                  were my escape, sparking a deep curiosity about technology and
-                  engineering. By the next decade, that curiosity had grown into
-                  a full-blown passion. It pushed me to take bold steps, even
-                  when the odds seemed stacked against me.
-                </span>
-                <span>
-                  At the time, I was teaching kids chess in schools. I loved
-                  helping them develop strategic thinking, but I couldn&apos;t
-                  shake this thought:{" "}
-                  <span className="font-bold italic">
-                    What if these kids could learn robotics instead?{" "}
-                  </span>{" "}
-                  The idea stuck with me, but there was a problem.
-                </span>
-              </p>
+              <div className="w-[612px] py-[52px]">
+                <div className="w-[548px] px-2 xl:pl-[64px]">
+                  <p className="w-[484px] flex flex-col gap-8 font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal">
+                    <span>
+                      <span className="font-bold italic">
+                        My name is Sam Eseyin,
+                      </span>{" "}
+                      and in the 2000s, I was obsessed with robotics movies.
+                      They were my escape, sparking a deep curiosity about
+                      technology and engineering. By the next decade, that
+                      curiosity had grown into a full-blown passion. It pushed
+                      me to take bold steps, even when the odds seemed stacked
+                      against me.
+                    </span>
+                    <span>
+                      At the time, I was teaching kids chess in schools. I loved
+                      helping them develop strategic thinking, but I
+                      couldn&apos;t shake this thought:{" "}
+                      <span className="font-bold italic">
+                        What if these kids could learn robotics instead?{" "}
+                      </span>{" "}
+                      The idea stuck with me, but there was a problem.
+                    </span>
+                  </p>
+                </div>
+              </div>
             </div>
             {/* (2)the Chess players section */}
-            <div className="h-full reveal inline-grid flex-none min-w-[1380px] max-w-[1380px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
-              <div className="h-full w-full lg:w-[754px]">
+            <div className="h-full reveal inline-grid flex-none min-w-[1444px] max-w-[1444px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
+              <div className="relative w-full h-full lg:w-[754px] aspect-square overflow-hidden">
                 <Image
                   src="/student-chess-players.webp"
                   alt=""
-                  width={754}
-                  height={754}
+                  fill
                   priority
-                  className="w-full h-full object-fill"
+                  sizes="(min-width: 1024px) 754px, 100vw"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <p className="w-full max-w-[584px] mx-auto font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal break-words hyphens-auto [text-wrap:balance] py-[52px] px-2 xl:pl-10 xl:pr-6 text-left">
-                In the environment I lived in,{" "}
-                <span className="font-bold italic">
-                  (a small village called Gbagalape on the outskirts of Abuja,
-                  Nigeria),{" "}
-                </span>{" "}
-                robotics was practically unheard of. Most kids had never even
-                seen a robotics kit, let alone understood how to use one. But I
-                couldn&apos;t let that stop me. I had to try. With no access to
-                fancy kits or resources, I got creative. I downloaded
-                schematics, and started pitching the idea to schools. I met with
-                school owners and administrators, explaining how robotics could
-                reshape the way kids think and learn. A few schools gave me a
-                chance, and I stood in front of students and their parents with{" "}
-                <span className="font-bold italic">
-                  nothing but printed papers in my hands.
-                </span>
-              </p>
+              <div className="w-[612px] py-[52px]">
+                <div className="w-[548px] px-2 xl:pl-[64px]">
+                  <p className="w-[484px] font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal">
+                    In the environment I lived in,{" "}
+                    <span className="font-bold italic">
+                      (a small village called Gbagalape on the outskirts of
+                      Abuja, Nigeria),{" "}
+                    </span>{" "}
+                    robotics was practically unheard of. Most kids had never
+                    even seen a robotics kit, let alone understood how to use
+                    one. But I couldn&apos;t let that stop me. I had to try.
+                    With no access to fancy kits or resources, I got creative. I
+                    downloaded schematics, and started pitching the idea to
+                    schools. I met with school owners and administrators,
+                    explaining how robotics could reshape the way kids think and
+                    learn. A few schools gave me a chance, and I stood in front
+                    of students and their parents with{" "}
+                    <span className="font-bold italic">
+                      nothing but printed papers in my hands.
+                    </span>
+                  </p>
+                </div>
+              </div>
             </div>
             {/* (3) three guys in red section */}
-            <div className="h-full reveal inline-grid flex-none min-w-[1380px] max-w-[1380px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
-              <div className="w-full h-full lg:w-[754px]">
+            <div className="h-full reveal inline-grid flex-none min-w-[1444px] max-w-[1444px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
+              <div className="relative h-full w-full lg:w-[754px] aspect-square overflow-hidden">
                 <Image
                   src="/three-friends-in-red-shirts.webp"
                   alt="Sams speaking at an event"
-                  width={754}
-                  height={754}
-                  className="w-full h-full object-fill"
+                  fill
                   priority
+                  sizes="(min-width: 1024px) 754px, 100vw"
+                  className="object-cover object-right"
                 />
               </div>
-              <p className="w-full max-w-[584px] mx-auto font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal break-words hyphens-auto [text-wrap:balance] py-[52px] px-2 xl:pl-16 xl:pr-10 text-left flex flex-col gap-8">
-                <span>
-                  The kids&apos; excitement was contagious. Their eyes lit up as
-                  I explained how robots worked, and I knew I had to do more.
-                  But there was one big problem: I didn&apos;t have a single
-                  robotics kit to show them. So, I did the only thing I could
-                  think of,{" "}
-                  <span className="font-bold italic">
-                    I sold the best pair of shoes I owned to scrape together
-                    enough money to order my first robotics kit,
-                  </span>{" "}
-                </span>
-                <span>
-                  When it finally arrived, I was overjoyed. I spent countless
-                  sleepless nights experimenting with it, learning everything I
-                  could. I was determined to master it so I could show kids what
-                  was possible.
-                </span>
-              </p>
+              <div className="w-[612px] py-[52px]">
+                <div className="w-[584px] px-2 xl:pl-[64px]">
+                  <p className="w-[484px] flex flex-col gap-8 font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal">
+                    <span>
+                      The kids&apos; excitement was contagious. Their eyes lit
+                      up as I explained how robots worked, and I knew I had to
+                      do more. But there was one big problem: I didn&apos;t have
+                      a single robotics kit to show them. So, I did the only
+                      thing I could think of,{" "}
+                      <span className="font-bold italic">
+                        I sold the best pair of shoes I owned to scrape together
+                        enough money to order my first robotics kit,
+                      </span>{" "}
+                    </span>
+                    <span>
+                      When it finally arrived, I was overjoyed. I spent
+                      countless sleepless nights experimenting with it, learning
+                      everything I could. I was determined to master it so I
+                      could show kids what was possible.
+                    </span>
+                  </p>
+                </div>
+              </div>
             </div>
             {/* (4) Two guys standing in suite with Sam section */}
-            <div className="h-full reveal inline-grid flex-none min-w-[1380px] max-w-[1380px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
-              <div className="w-full h-full lg:w-[754px]">
+            <div className="h-full reveal inline-grid flex-none min-w-[1444px] max-w-[1444px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
+              <div className="relative h-full w-full lg:w-[754px] aspect-square overflow-hidden">
                 <Image
                   src="/sam-in-white-shirt.webp"
                   alt=""
-                  width={754}
-                  height={754}
+                  fill
                   priority
-                  className="w-full h-full object-fill scale-[1.01]"
+                  sizes="(min-width: 1024px) 754px, 100vw"
+                  className="object-cover"
                 />
               </div>
-              <p className="w-full max-w-[584px] mx-auto font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal break-words hyphens-auto [text-wrap:balance] py-[52px] px-2 xl:pl-10 xl:pr-6 text-left flex flex-col gap-8">
-                <span>
-                  Confident in my new knowledge, I started touring schools in
-                  Abuja, demonstrating the kit&apos;s potential. The kids were
-                  amazed, and their excitement fueled me. That&apos;s when{" "}
-                  <span className="font-bold italic">Ideal Robotics</span> was
-                  born.
-                </span>
-                <span>
-                  Not long after, I met{" "}
-                  <span className="font-bold italic">
-                    Malik Gwandu, my co-founder
-                  </span>{" "}
-                  and one of the most passionate and kindest people I&apos;ve
-                  ever known. Together, we became a team on a mission. We went
-                  from school to school in Abuja, talking to anyone who would
-                  listen about STEM and robotics. We wanted kids to see what was
-                  possible to imagine a future where they could build, create,
-                  and solve problems.
-                </span>
-              </p>
+              <div className="w-[612px] py-[52px]">
+                <div className="w-[584px] px-2 xl:pl-[64px]">
+                  <p className="w-[484px] flex flex-col gap-8 font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal">
+                    <span>
+                      Confident in my new knowledge, I started touring schools
+                      in Abuja, demonstrating the kit&apos;s potential. The kids
+                      were amazed, and their excitement fueled me. That&apos;s
+                      when{" "}
+                      <span className="font-bold italic">Ideal Robotics</span>{" "}
+                      was born.
+                    </span>
+                    <span>
+                      Not long after, I met{" "}
+                      <span className="font-bold italic">
+                        Malik Gwandu, my co-founder
+                      </span>{" "}
+                      and one of the most passionate and kindest people
+                      I&apos;ve ever known. Together, we became a team on a
+                      mission. We went from school to school in Abuja, talking
+                      to anyone who would listen about STEM and robotics. We
+                      wanted kids to see what was possible to imagine a future
+                      where they could build, create, and solve problems.
+                    </span>
+                  </p>
+                </div>
+              </div>
             </div>
             {/* (5) Two guys standing in suite with Sam section */}
-            <div className="h-full reveal inline-grid flex-none min-w-[1380px] max-w-[1380px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
-              <div className="w-full h-full lg:w-[754px]">
+            <div className="h-full reveal inline-grid flex-none min-w-[1444px] max-w-[1444px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
+              <div className="relative h-full w-full lg:w-[754px] aspect-square overflow-hidden">
                 <Image
                   src="/sam-and-malik-in-red.webp"
                   alt=""
-                  width={754}
-                  height={754}
+                  fill
                   priority
-                  className="w-full h-full object-fill"
+                  sizes="(min-width: 1024px) 754px, 100vw"
+                  className="object-cover object-left"
                 />
               </div>
-              <p className="w-full max-w-[584px] mx-auto font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal break-words hyphens-auto [text-wrap:balance] py-[52px] px-2 xl:pl-10 xl:pr-6 text-left flex flex-col gap-8">
-                <span>
-                  Malik had this funny habit of saying,{" "}
-                  <span className="font-bold italic">
-                    &quot;Every time we walk into a supermarket, there&apos;s a
-                    90% chance some kid will point at us and say, &apos;Hey,
-                    Mom, that&apos;s my robotics teacher!&quot;
-                  </span>{" "}
-                  And you know what? He was usually right. Those moments kept us
-                  going. After months of free workshops and school visits,{" "}
-                  <span className="font-bold italic">
-                    we finally got our first paying client, Lela Blossom School.{" "}
-                  </span>{" "}
-                  I&apos;ll never forget that feeling. It was like, &quot;Okay,
-                  this is real, we&apos;re really doing this.&quot;
-                </span>{" "}
-                <span>
-                  We were in demand, but with growth came new challenges.
-                  Schools paid us at the end of the term, and I didn&apos;t have
-                  enough money to hire the team we needed.
-                </span>
-              </p>
+
+              <div className="w-[612px] py-[52px]">
+                <div className="w-[584px] px-2 xl:pl-[64px]">
+                  <p className="w-[484px] flex flex-col gap-8 font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal">
+                    <span>
+                      Malik had this funny habit of saying,{" "}
+                      <span className="font-bold italic">
+                        &quot;Every time we walk into a supermarket,
+                        there&apos;s a 90% chance some kid will point at us and
+                        say, &apos;Hey, Mom, that&apos;s my robotics
+                        teacher!&quot;
+                      </span>{" "}
+                      And you know what? He was usually right. Those moments
+                      kept us going. After months of free workshops and school
+                      visits,{" "}
+                      <span className="font-bold italic">
+                        we finally got our first paying client, Lela Blossom
+                        School.{" "}
+                      </span>{" "}
+                      I&apos;ll never forget that feeling. It was like,
+                      &quot;Okay, this is real, we&apos;re really doing
+                      this.&quot;
+                    </span>{" "}
+                    <span>
+                      We were in demand, but with growth came new challenges.
+                      Schools paid us at the end of the term, and I didn&apos;t
+                      have enough money to hire the team we needed.
+                    </span>
+                  </p>
+                </div>
+              </div>
             </div>
             {/* (6) Two guys standing in suite with Sam section */}
-            <div className="h-full reveal inline-grid flex-none min-w-[1380px] max-w-[1380px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
-              <div className="w-full h-full lg:w-[754px]">
+            <div className="h-full reveal inline-grid flex-none min-w-[1444px] max-w-[1444px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
+              <div className="relative h-full w-full lg:w-[754px] aspect-square overflow-hidden">
                 <Image
                   src="/robot-outdoor.webp"
                   alt=""
-                  width={754}
-                  height={754}
+                  fill
                   priority
-                  className="w-full  h-full object-top-right"
+                  sizes="(min-width: 1024px) 754px, 100vw"
+                  className="object-cover"
                 />
               </div>
-              <p className="w-full max-w-[584px] mx-auto font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal break-words hyphens-auto [text-wrap:balance] py-[52px] px-2 xl:pl-10 xl:pr-6 text-left flex flex-col gap-8">
-                <span>
-                  I put out an ad, hoping someone would believe in what we were
-                  trying to do. And people did. A group of amazing people joined
-                  us, even though we couldn&apos;t promise much. We were paying
-                  each person just 50,000 Naira, it was all we could afford at
-                  the time. Malik and I weren&apos;t taking any pay; we poured
-                  everything back into the company.
-                </span>
-                <span>
-                  We rented a small office space with the little money we had.
-                  It was empty, with no chairs, no furniture, just a floor.
-                  Every morning, we&apos;d sit on that floor, plan our day, and
-                  then head out to schools to teach. I made a promise to my
-                  team: I would never owe them a salary.
-                </span>
-              </p>
+              <div className="w-[612px] py-[52px]">
+                <div className="w-[584px] px-2 xl:pl-[64px]">
+                  <p className="w-[484px] flex flex-col gap-8 font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal">
+                    <span>
+                      I put out an ad, hoping someone would believe in what we
+                      were trying to do. And people did. A group of amazing
+                      people joined us, even though we couldn&apos;t promise
+                      much. We were paying each person just 50,000 Naira, it was
+                      all we could afford at the time. Malik and I weren&apos;t
+                      taking any pay; we poured everything back into the
+                      company.
+                    </span>
+                    <span>
+                      We rented a small office space with the little money we
+                      had. It was empty, with no chairs, no furniture, just a
+                      floor. Every morning, we&apos;d sit on that floor, plan
+                      our day, and then head out to schools to teach. I made a
+                      promise to my team: I would never owe them a salary.
+                    </span>
+                  </p>
+                </div>
+              </div>
             </div>
             {/* (7) Two guys standing in suite with Sam section */}
-            <div className="h-full reveal inline-grid flex-none min-w-[1380px] max-w-[1380px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
-              <div className="w-full h-full lg:w-[754px]">
+            <div className="h-full reveal inline-grid flex-none min-w-[1444px] max-w-[1444px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
+              <div className="relative h-full w-full lg:w-[754px] aspect-square overflow-hidden">
                 <Image
                   src="/ideal-teachers-on-the-floor.webp"
                   alt=""
-                  width={754}
-                  height={754}
+                  fill
                   priority
-                  className="w-full h-full object-fill object-top scale-[1.01]"
+                  sizes="(min-width: 1024px) 754px, 100vw"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <p className="w-full max-w-[584px] mx-auto font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal break-words hyphens-auto [text-wrap:balance] py-[52px] px-2 xl:pl-10 xl:pr-6 text-left flex flex-col gap-8">
-                <span>
-                  It wasn&apos;t easy to keep that promise, but I was
-                  determined. To make ends meet, I took on several side gigs,
-                  including playing the saxophone at a nightclub after work
-                  hours. Eventually, we managed to buy two chairs from Pantaker
-                  (A place where used items are sold).
-                </span>
-                <span>
-                  We had a rule: first come, first serve. As the founder, I was
-                  always the first to arrive, but I let my team take the seats.
-                  They deserved it more than I did. I couldn&apos;t ask for a
-                  better team, even in tough situations when we ran out of money
-                  for operations. My team members would use their own resources.
-                </span>
-              </p>
+              <div className="w-[612px] py-[52px]">
+                <div className="w-[584px] px-2 xl:pl-[64px]">
+                  <p className="w-[484px] flex flex-col gap-8 font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal">
+                    <span>
+                      It wasn&apos;t easy to keep that promise, but I was
+                      determined. To make ends meet, I took on several side
+                      gigs, including playing the saxophone at a nightclub after
+                      work hours. Eventually, we managed to buy two chairs from
+                      Pantaker (A place where used items are sold).
+                    </span>
+                    <span>
+                      We had a rule: first come, first serve. As the founder, I
+                      was always the first to arrive, but I let my team take the
+                      seats. They deserved it more than I did. I couldn&apos;t
+                      ask for a better team, even in tough situations when we
+                      ran out of money for operations. My team members would use
+                      their own resources.
+                    </span>
+                  </p>
+                </div>
+              </div>
             </div>
             {/* (8) Two guys standing in suite with Sam section */}
-            <div className="h-full reveal inline-grid flex-none min-w-[1380px] max-w-[1380px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
-              <div className="w-full h-full lg:w-[754px]">
+            <div className="h-full reveal inline-grid flex-none min-w-[1444px] max-w-[1444px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
+              <div className="relative h-full w-full lg:w-[754px] aspect-square overflow-hidden">
                 <Image
                   src="/ideal-robotic-teachers-explanation.webp"
                   alt=""
                   width={832}
                   height={754}
                   priority
-                  className="w-full h-full object-fill"
+                  className="h-full object-fill"
                 />
               </div>
-              <p className="w-full max-w-[584px] mx-auto font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal break-words hyphens-auto [text-wrap:balance] py-[52px] px-2 xl:pl-10 xl:pr-6 text-left flex flex-col gap-8">
-                <span>
-                  Shola, Queensley, Samuel, Victor, and Malik - these were the
-                  people who carried Ideal Robotics on their shoulders. They
-                  believed in the dream so much that they&apos;d bring me food
-                  from home when they knew I hadn&apos;t eaten. I&apos;ll never
-                  forget their kindness.
-                </span>
-                <span>
-                  During one of our toughest times, I reached out to Faiz
-                  Bashir, the founder of FlexiSAF, who generously provided us
-                  with funds that kept us going and truly saved us. As we
-                  continued to grow, so did our impact. School owners began
-                  referring us to their friends who also ran schools, often
-                  saying, “You have to see what these kids are building!”
-                </span>
-              </p>
+              <div className="w-[612px] py-[52px]">
+                <div className="w-[584px] px-2 xl:pl-[64px]">
+                  <p className="w-[484px] flex flex-col gap-8 font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal">
+                    <span>
+                      Shola, Queensley, Samuel, Victor, and Malik - these were
+                      the people who carried Ideal Robotics on their shoulders.
+                      They believed in the dream so much that they&apos;d bring
+                      me food from home when they knew I hadn&apos;t eaten.
+                      I&apos;ll never forget their kindness.
+                    </span>
+                    <span>
+                      During one of our toughest times, I reached out to Faiz
+                      Bashir, the founder of FlexiSAF, who generously provided
+                      us with funds that kept us going and truly saved us. As we
+                      continued to grow, so did our impact. School owners began
+                      referring us to their friends who also ran schools, often
+                      saying, “You have to see what these kids are building!”
+                    </span>
+                  </p>
+                </div>
+              </div>
             </div>
             {/* (9) Two guys standing in suite with Sam section */}
-            <div className="h-full reveal inline-grid flex-none min-w-[1380px] max-w-[1380px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
-              <div className="w-full h-full lg:w-[754px]">
+            <div className="h-full reveal inline-grid flex-none min-w-[1444px] max-w-[1444px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
+              <div className="relative h-full w-full lg:w-[754px] aspect-square overflow-hidden">
                 <Image
                   src="/sam-ideal-robotic-red-shirt-with-teacher.webp"
                   alt=""
-                  width={754}
-                  height={754}
+                  fill
                   priority
-                  className="w-full  h-full object-fill scale-[1.05]"
+                  sizes="(min-width: 1024px) 754px, 100vw"
+                  className="object-cover object-center"
                 />
               </div>
-              <p className="w-full max-w-[584px] mx-auto font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal break-words hyphens-auto [text-wrap:balance] py-[52px] px-2 xl:pl-10 xl:pr-6 text-left flex flex-col gap-8">
-                <span>
-                  Parents joined in spreading the word, especially during summer
-                  camps, excited to share how their children were building
-                  robots, coding, designing mobile apps, and solving real-world
-                  problems. They wanted other kids to have the same empowering
-                  experience. It was inspiring to watch how word of mouth
-                  carried us forward.{" "}
-                </span>
-                <span>
-                  The biggest validation came when some of the schools we worked
-                  with began incorporating robotics into their curriculum. After
-                  seeing the impact it had on their students and how it sparked
-                  creativity, critical thinking, and problem-solving, they made
-                  it compulsory.
-                </span>
-              </p>
+              <div className="w-[612px] py-[52px]">
+                <div className="w-[584px] px-2 xl:pl-[64px]">
+                  <p className="w-[484px] flex flex-col gap-8 font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal">
+                    <span>
+                      Parents joined in spreading the word, especially during
+                      summer camps, excited to share how their children were
+                      building robots, coding, designing mobile apps, and
+                      solving real-world problems. They wanted other kids to
+                      have the same empowering experience. It was inspiring to
+                      watch how word of mouth carried us forward.{" "}
+                    </span>
+                    <span>
+                      The biggest validation came when some of the schools we
+                      worked with began incorporating robotics into their
+                      curriculum. After seeing the impact it had on their
+                      students and how it sparked creativity, critical thinking,
+                      and problem-solving, they made it compulsory.
+                    </span>
+                  </p>
+                </div>
+              </div>
             </div>
             {/* (9) Two guys standing in suite with Sam section */}
-            <div className="h-full reveal inline-grid flex-none min-w-[1380px] max-w-[1380px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
-              <div className="w-full h-full lg:w-[754px]">
+            <div className="h-full reveal inline-grid flex-none min-w-[1444px] max-w-[1444px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
+              <div className="relative h-full w-full lg:w-[754px] aspect-square overflow-hidden">
                 <Image
                   src="/ideal-robotic-student-event.webp"
                   alt=""
-                  width={754}
-                  height={754}
+                  fill
                   priority
-                  className="w-full h-full object-fill"
+                  sizes="(min-width: 1024px) 754px, 100vw"
+                  className="object-cover"
                 />
               </div>
-              <p className="w-full max-w-[584px] mx-auto font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal break-words hyphens-auto [text-wrap:balance] py-[52px] px-2 xl:pl-10 xl:pr-6 text-left flex flex-col gap-8">
-                <span>
-                  That was a huge win for us. What started as an extracurricular
-                  activity was now becoming a core part of education in some
-                  schools. We partnered with organizations like, Avion
-                  Innovation Hub, MTO Technologies, and the Discovery Museum to
-                  reach even more kids. During summer holidays, we ran intensive
-                  STEM and coding programs, teaching skills that many kids had
-                  never imagined.{" "}
-                </span>
-                <span>
-                  We also took them on excursions to various tech companies and
-                  organizations such as the National Center for Artificial
-                  Intelligence and Robotics, Flexisaf Edusoft.
-                </span>
-              </p>
+              <div className="w-[612px] py-[52px]">
+                <div className="w-[584px] px-2 xl:pl-[64px]">
+                  <p className="w-[484px] flex flex-col gap-8 font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal">
+                    <span>
+                      That was a huge win for us. What started as an
+                      extracurricular activity was now becoming a core part of
+                      education in some schools. We partnered with organizations
+                      like, Avion Innovation Hub, MTO Technologies, and the
+                      Discovery Museum to reach even more kids. During summer
+                      holidays, we ran intensive STEM and coding programs,
+                      teaching skills that many kids had never imagined.{" "}
+                    </span>
+                    <span>
+                      We also took them on excursions to various tech companies
+                      and organizations such as the National Center for
+                      Artificial Intelligence and Robotics, Flexisaf Edusoft.
+                    </span>
+                  </p>
+                </div>
+              </div>
             </div>{" "}
             {/* (10) Two guys standing in suite with Sam section */}
-            <div className="h-full reveal inline-grid flex-none min-w-[1380px] max-w-[1380px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
-              <div className="w-full h-full lg:w-[754px]">
+            <div className="h-full reveal inline-grid flex-none min-w-[1444px] max-w-[1444px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
+              <div className="relative h-full w-full lg:w-[754px] aspect-square overflow-hidden">
+                <Image
+                  src="/sam-meetings.webp"
+                  alt=""
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 754px, 100vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="w-[612px] py-[52px]">
+                <div className="w-[584px] px-2 xl:pl-[64px]">
+                  <p className="w-[484px] flex flex-col gap-8 font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal">
+                    <span>
+                      <span>Seeing their faces light up with curiosity</span>{" "}
+                      and ambition was everything. One of our proudest moments
+                      was launching{" "}
+                      <span className="font-bold italic">Code Quest</span>, an
+                      annual coding competition that brought kids from different
+                      schools together. Watching them collaborate as a team,
+                      challenge themselves, and enhance their coding skills was
+                      truly inspiring.
+                    </span>
+                    <span>
+                      Another major milestone came when Castle Hill Academy, one
+                      of the schools we trained, surpassed more than 200
+                      competitors to win the{" "}
+                      <span className="font-bold">
+                        Most Innovative Project award at a STEM competition
+                      </span>{" "}
+                      organized by the Nigerian federal government.
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* (11) Two guys standing in suite with Sam section */}
+            <div className="h-full reveal inline-grid flex-none min-w-[1444px] max-w-[1444px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
+              <div className="relative h-full w-full lg:w-[754px] aspect-square overflow-hidden">
                 <Image
                   src="/ideal-robotic-students.webp"
                   alt=""
-                  width={754}
-                  height={754}
+                  fill
                   priority
-                  className="w-full  h-full object-fill"
+                  sizes="(min-width: 1024px) 754px, 100vw"
+                  className="object-cover"
                 />
               </div>
-              <p className="w-full max-w-[584px] mx-auto font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal break-words hyphens-auto [text-wrap:balance] py-[52px] px-2 xl:pl-10 xl:pr-6 text-left flex flex-col gap-8">
-                <span>
-                  <span className="font-bold italic">
-                    After eight years, Ideal Robotics had to shut down.
-                  </span>{" "}
-                  It was one of the toughest experience I&apos;ve had. Watching
-                  something I had built from scratch, something that touched so
-                  many lives, come to an end broke my heart. Closing the doors
-                  of Ideal Robotics was an incredibly difficult decision. Yet,
-                  through that setback, I found clarity.
-                </span>
-                <span>
-                  I realized that the impact we made on students, schools, and
-                  my team was only the beginning. I carry that same passion into
-                  this next chapter, working to empower even more young minds to
-                  dream, create, and innovate.
-                </span>
-              </p>
+              <div className="w-[612px] py-[52px]">
+                <div className="w-[584px] px-2 xl:pl-[64px]">
+                  <p className="w-[484px] flex flex-col gap-8 font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal">
+                    <span>
+                      <span className="font-bold italic">
+                        After eight years, Ideal Robotics had to shut down.
+                      </span>{" "}
+                      It was one of the toughest experience I&apos;ve had.
+                      Watching something I had built from scratch, something
+                      that touched so many lives, come to an end broke my heart.
+                      Closing the doors of Ideal Robotics was an incredibly
+                      difficult decision. Yet, through that setback, I found
+                      clarity.
+                    </span>
+                    <span>
+                      I realized that the impact we made on students, schools,
+                      and my team was only the beginning. I carry that same
+                      passion into this next chapter, working to empower even
+                      more young minds to dream, create, and innovate.
+                    </span>
+                  </p>
+                </div>
+              </div>
             </div>
             {/* (11) Two guys standing in suite with Sam section */}
-            <div className="h-full reveal inline-grid flex-none min-w-[1380px] max-w-[1380px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
-              <div className="w-full h-full lg:w-[754px]">
+            <div className="h-full reveal inline-grid flex-none min-w-[1444px] max-w-[1444px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
+              <div className="relative h-full w-full lg:w-[754px] aspect-square overflow-hidden">
                 <Image
                   src="/hoodie-pair.webp"
                   alt=""
-                  width={754}
-                  height={754}
+                  fill
                   priority
-                  className="w-full h-full object-fill"
+                  sizes="(min-width: 1024px) 754px, 100vw"
+                  className="object-cover"
                 />
               </div>
-              <p className="w-full max-w-[584px] mx-auto font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal break-words hyphens-auto [text-wrap:balance] py-[52px] px-2 xl:pl-10 xl:pr-6 text-left flex flex-col gap-8">
-                <span>
-                  As I reflect on this journey, I am reminded of the people who
-                  stood by me, believed in me, and helped me keep going. My mom,
-                  whose unwavering support gave me the courage to dream big. My
-                  friend Sefater, who always encouraged me to keep pushing.
-                  Abdul-Malik, managing director of Cloud9, whose guidance and
-                  mentorship were invaluable, Mr. Thomas, and Samuel Kayode,
-                  whose friendship and support kept me grounded. To my team,
-                  Patience, Jessica, Keddy, Maxwell, Joes, Sushi, Florentina,
-                  Mildred, Chinedu, Chisom, my co-founder Malik, I am forever
-                  grateful.{" "}
-                  <span className="font-bold italic">
-                    The dream did not end; it evolved. And so will I.
-                  </span>
-                </span>
-              </p>
+              <div className="w-[612px] py-[52px]">
+                <div className="w-[584px] px-2 xl:pl-[64px]">
+                  <p className="w-[484px] flex flex-col gap-8 font-lora font-normal text-[#252323] text-[22.4px] leading-[40.32px] tracking-normal">
+                    <span>
+                      As I reflect on this journey, I am reminded of the people
+                      who stood by me, believed in me, and helped me keep going.
+                      My mom, whose unwavering support gave me the courage to
+                      dream big. My friend Sefater, who always encouraged me to
+                      keep pushing. Abdul-Malik, managing director of Cloud9,
+                      whose guidance and mentorship were invaluable, Mr. Thomas,
+                      and Samuel Kayode, whose friendship and support kept me
+                      grounded. To my team, Patience, Jessica, Keddy, Maxwell,
+                      Joes, Sushi, Florentina, Mildred, Chinedu, Chisom, my
+                      co-founder Malik, I am forever grateful.{" "}
+                      <span className="font-bold italic">
+                        The dream did not end; it evolved. And so will I.
+                      </span>
+                    </span>
+                  </p>
+                </div>
+              </div>
             </div>
             {/* (11) Two guys standing in suite with Sam section */}
             <div className="h-full reveal inline-grid flex-none min-w-[754px] max-w-[754px] grid-cols-[1.25fr_1fr] overflow-hidden bg-[#ECE9E1]">
-              <div className="w-full h-full lg:w-[754px]">
+              <div className="relative h-full w-full lg:w-[754px] aspect-square overflow-hidden">
                 <Image
                   src="/team-ideal.webp"
                   alt=""
                   fill
                   priority
-                  className="w-full h-full object-fill"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
