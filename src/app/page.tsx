@@ -921,14 +921,26 @@ export default function Page() {
               I&apos;m a STEM Educator and K-12 Curriculum Developer with over a
               decade of experience. To date, I&apos;ve taught more than 6,000
               students across 18 countries and mentored winners of national and
-              international competitions, including{" "}
+              international competitions, including the National BETA State
+              Competition in Computer Science (
+              {/* <VideoPlayer
+                videoUrl="https://res.cloudinary.com/your-cloud/video/upload/v12345/demo.mp4"
+                label="2024"
+              />{" "} */}
+              <span className="underline">2024</span> &amp;{" "}
+              <span className="underline">2025</span>{" "}
+              {/* <VideoPlayer
+                videoUrl="https://res.cloudinary.com/djeoaylbe/video/upload/v1751487159/WhatsApp_Video_2025-06-20_at_13.25.54_1_psrji2.mov"
+                label="2025"
+              />{" "} */}
+              , U.S.) and the{" "}
               <span className="font-bold italic">
-                the National BETA State Competition in Computer Science (2024
-                &amp; 2025, U.S.)
-              </span>{" "}
-              and the{" "}
-              <span className="font-bold italic">
-                AI Challenge in Indonesia (2025)
+                AI Challenge in Indonesia (
+                <VideoPlayer
+                  videoUrl="https://res.cloudinary.com/djeoaylbe/video/upload/v1751486914/WhatsApp_Video_2025-07-01_at_14.44.02_on2yfy.mp4"
+                  label="2025"
+                />
+                )
               </span>
               . I&apos;m also one of the pioneers of robotics/STEM education in
               schools across Nigeria.
