@@ -240,25 +240,24 @@ export default function Page() {
                 national and international competitions, including{" "}
                 <span className="font-bold italic">
                   the National BETA State Competition in Computer Science (
-                  {/* <VideoPlayer
-                    videoUrl="https://res.cloudinary.com/your-cloud/video/upload/v12345/demo.mp4"
+                  <VideoPlayer
+                    videoUrl="https://res.cloudinary.com/djeoaylbe/video/upload/v1751487485/a35fc9f1-943d-46ff-83c6-6db0df02cfed_qqiea5.mov"
                     label="2024"
-                  />{" "} */}{" "}
-                  <span className="underline">2024</span> &amp;{" "}
-                  <span className="underline">2025</span>
-                  {/* <VideoPlayer
-                    videoUrl="https://res.cloudinary.com/djeoaylbe/video/upload/v1751487159/WhatsApp_Video_2025-06-20_at_13.25.54_1_psrji2.mov"
+                  />{" "}
+                  &amp;{" "}
+                  <VideoPlayer
+                    videoUrl="https://res.cloudinary.com/djeoaylbe/video/upload/v1751486914/WhatsApp_Video_2025-07-01_at_14.44.02_on2yfy.mp4"
                     label="2025"
-                  /> */}
+                  />
                   , U.S.)
                 </span>{" "}
                 and the{" "}
                 <span className="font-bold italic">
                   AI Challenge in Indonesia (
-                  <VideoPlayer
-                    videoUrl="https://res.cloudinary.com/djeoaylbe/video/upload/v1751486914/WhatsApp_Video_2025-07-01_at_14.44.02_on2yfy.mp4"
+                  {/* <VideoPlayer
+                    videoUrl="https://res.cloudinary.com/djeoaylbe/video/upload/v1751487159/WhatsApp_Video_2025-06-20_at_13.25.54_1_psrji2.mov"
                     label="2025"
-                  />
+                  /> */}
                   )
                 </span>
                 . I&apos;m also one of the pioneers of robotics/STEM education
